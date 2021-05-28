@@ -1,0 +1,349 @@
+public public boolean canShiftLeft(PlayField playfield)
+	{
+		System.out.println("Rotation: " + rotation + "\tPiece: " + piece);
+		//System.out.println(playfield.isSquareFilled(x - 1, y));
+		//System.out.println("Test");
+		if (piece == 'I')
+		{
+			if (rotation == 1 && x == 1)
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 2 && x == 1)
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 3 && x4 == 1)
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 4 && x == 1)
+			{
+				canShiftLeft = false;
+			}
+
+			else if (rotation == 1 && playfield.isSquareFilled(x - 1, y))
+			{
+				canShiftLeft = false;
+				System.out.println("cantShiftLeft I1");
+			}
+			
+			else if (rotation == 2 && (playfield.isSquareFilled(x - 1, y)
+					|| playfield.isSquareFilled(x2 - 1, y2)
+					|| playfield.isSquareFilled(x3 - 1, y3)
+					|| playfield.isSquareFilled(x4 - 1, y4)))
+			{
+				canShiftLeft = false;
+				System.out.println("cantShiftLeft I2");
+			}
+			
+			else if (rotation == 3 && playfield.isSquareFilled(x4, y4))
+			{
+				canShiftLeft = false;
+				System.out.println("cantShiftLeft I3");
+			}
+			
+			else if (rotation == 4 && (playfield.isSquareFilled(x - 1, y)
+					|| playfield.isSquareFilled(x2 - 1, y2)
+					|| playfield.isSquareFilled(x3 - 1, y3)
+					|| playfield.isSquareFilled(x4 - 1, y4)))
+			{
+				canShiftLeft = false;
+				System.out.println("cantShiftLeft I4");
+			}
+			
+			else 
+			{
+				System.out.println("canShiftLeft");
+				canShiftLeft = true;
+			}
+		}
+		
+		else if (piece == 'J')
+		{
+			if (rotation == 1 && x == 1)
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 2 && x2 == 1)
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 3 && x4 == 1)
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 4 && x == 1)
+			{
+				canShiftLeft = false;
+			}
+
+			else if (rotation == 1 && (playfield.isSquareFilled(x - 1, y)
+					|| playfield.isSquareFilled(x2 - 1, y2)))
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 2 && (playfield.isSquareFilled(x2 - 1, y2)
+					|| playfield.isSquareFilled(x3 - 1, y3)
+					|| playfield.isSquareFilled(x4 - 1, y4)))
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 3 && (playfield.isSquareFilled(x - 1, y)
+					|| playfield.isSquareFilled(x4 - 1, y4)))
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 4 && (playfield.isSquareFilled(x - 1, y)
+					|| playfield.isSquareFilled(x3 - 1, y3)
+					|| playfield.isSquareFilled(x4 - 1, y4)))
+			{
+				canShiftLeft = false;
+			}
+			
+			else 
+			{
+				System.out.println("canShiftLeft");
+				canShiftLeft = true;
+			}
+		}
+		
+		else if (piece == 'L')
+		{
+			if (rotation == 1 && x == 1)
+			{
+				canShiftLeft = false;
+			}
+
+			else if (rotation == 2 && x == 1)
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 3 && x3 == 1)
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 4 && x4 == 1)
+			{
+				canShiftLeft = false;
+			}
+
+			else if (rotation == 1 && (playfield.isSquareFilled(x - 1, y)
+					|| playfield.isSquareFilled(x4 - 1, y4)))
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 2 && (playfield.isSquareFilled(x - 1, y)
+					|| playfield.isSquareFilled(x2 - 1, y2)
+					|| playfield.isSquareFilled(x3 - 1, y3)))
+			{
+				canShiftLeft = false;
+			}
+
+			else if (rotation == 3 && (playfield.isSquareFilled(x3 - 1, y3)
+					|| playfield.isSquareFilled(x4 - 1, y4)))
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 4 && (playfield.isSquareFilled(x - 1, y)
+					|| playfield.isSquareFilled(x3 - 1, y3)
+					|| playfield.isSquareFilled(x4 - 1, y4)))
+			{
+				canShiftLeft = false;
+			}
+			
+			else 
+			{
+				System.out.println("canShiftLeft");
+				canShiftLeft = true;
+			}
+
+		}
+		
+		else if (piece == 'O' && (playfield.isSquareFilled(x - 1, y) || playfield.isSquareFilled(x4 - 1, y)))
+		{
+			canShiftLeft = false;
+			System.out.println("cantShiftLeft O");
+		}
+		
+		else if (piece == 'O' && x == 1)
+		{
+			canShiftLeft = false;
+		}
+			
+		else if (piece == 'S')
+		{
+			if (rotation == 1 && x == 1)
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 2 && x == 1)
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 3 && x4 == 1)
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 4 && x4 == 1)
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 1 && (playfield.isSquareFilled(x - 1, y)
+					|| playfield.isSquareFilled(x3 - 1, y3)))
+			{
+				canShiftLeft = false;
+			}
+
+			else if (rotation == 2 && (playfield.isSquareFilled(x - 1, y)
+					|| playfield.isSquareFilled(x2 - 1, y2)
+					|| playfield.isSquareFilled(x4 - 1, y4)))
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 3 && (playfield.isSquareFilled(x2 - 1, y2)
+					|| playfield.isSquareFilled(x4 - 1, y4)))
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 4 && (playfield.isSquareFilled(x - 1, y)
+					|| playfield.isSquareFilled(x3 - 1, y3)
+					|| playfield.isSquareFilled(x4 - 1, y4)))
+			{
+				canShiftLeft = false;
+			}
+			
+			else 
+			{
+				System.out.println("canShiftLeft");
+				canShiftLeft = true;
+			}
+		}
+		
+		else if (piece == 'T')
+		{
+			if ((rotation == 1 || rotation == 3 || rotation == 4)&& x2 == 2)
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 2 && x == 1)
+			{
+				canShiftLeft = false;
+			}
+
+			else if (rotation == 1 && (playfield.isSquareFilled(x - 1, y)
+					|| playfield.isSquareFilled(x3 - 1, y3)))
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 2 && (playfield.isSquareFilled(x - 1, y)
+					|| playfield.isSquareFilled(x2 - 1, y2)
+					|| playfield.isSquareFilled(x4 - 1, y4)))
+			{
+				canShiftLeft = false;
+			}
+
+			else if (rotation == 3 && (playfield.isSquareFilled(x3 - 1, y3)
+					|| playfield.isSquareFilled(x4 - 1, y4)))
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 4 && (playfield.isSquareFilled(x - 1, y)
+					|| playfield.isSquareFilled(x3 - 1, y3)
+					|| playfield.isSquareFilled(x4 - 1, y4)))
+			{
+				canShiftLeft = false;
+			}
+			else 
+			{
+				System.out.println("canShiftLeft");
+				canShiftLeft = true;
+			}
+		}
+		
+		else if (piece == 'Z')
+		{
+			if (rotation == 1 && x == 1)
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 2 && x3 == 1)
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 3 && x4 == 1)
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 4 && x == 1)
+			{
+				canShiftLeft = false;
+			}
+
+			else if (rotation == 1 && (playfield.isSquareFilled(x - 1, y)
+					|| playfield.isSquareFilled(x3 - 1, y3)))
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 2 && (playfield.isSquareFilled(x - 1, y)
+					|| playfield.isSquareFilled(x3 - 1, y3)
+					|| playfield.isSquareFilled(x4 - 1, y4)))
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 3 && (playfield.isSquareFilled(x2 - 1, y2)
+					|| playfield.isSquareFilled(x3 - 1, y3)))
+			{
+				canShiftLeft = false;
+			}
+			
+			else if (rotation == 4 && (playfield.isSquareFilled(x - 1, y)
+					|| playfield.isSquareFilled(x2 - 1, y2)
+					|| playfield.isSquareFilled(x4 - 1, y4)))
+			{
+				canShiftLeft = false;
+			}
+			else 
+			{
+				System.out.println("canShiftLeft");
+				canShiftLeft = true;
+			}
+		}
+		
+	
+		//canShiftLeft = true;
+		else 
+		{
+			System.out.println("canShiftLeft");
+			canShiftLeft = true;
+		}
+		
+		return canShiftLeft;
+	}
